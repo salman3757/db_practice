@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)file:///C:/Users/Salman/AppData/Local/Temp/Rar$EXa8224.12025/LWD5e_materials/ch19/sneakerform.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+   <title>REGISTRATION</title>
+<style type="text/css">
+
+/* Makes sizing form elements more consistent */
+html {
+	box-sizing: border-box;
+	}
+*, *:before, *:after {
+	box-sizing: inherit;
+	}
+
+/* ========= BASIC FONT STYLING ========= */
+
+body {
+	font-family: Comic Sans, cursive;
+	font-size: 100%;
+	margin: 2em 25%;
+	line-height: 1;
+	background-color:#783F27;
+	background:repeating-linear-gradient(45deg, #783F27, #783F27 12px, #F9AB33 12px, #F9AB33 24px);
+
+	}
+
+h2 {
+    text-align:center;
+	color: #783F27;
+	font-size: 1.2em;
+	margin: 0 0 1.5em 0;
+}
+em {
+	font-size: .8em;
+	color: rgba(0,0,0,.4);
+}
+
+/* ========= CLEARING OUT LIST STYLES ========= */
+
+ul { 
+   list-style-type: none;
+	margin: 0;
+	padding: 0;
+      }
+input:focus { background-color: #FF9F21; }
+input:hover { background-color: #FF9F21; }
+input:active { background-color: #F9AB33; }
+
+/* ========= ADDING SPACE BELOW LIST ITEMS IN FORM 
+(EXCEPT FOR CHECKBOXES AND RADIO BUTTONS) ========= */
+
+ul li {
+	margin-bottom: 1em; 
+}
+#colors ul li, #features ul li {
+	margin-bottom: 0;
+} 
+
+
+/* ========= FORM DIMENSIONS AND STYLING =========  */
+
+form {
+	max-width: 40em;
+	border: 4px dashed #783F27;
+	/* border-radius: 25px; */ 
+	background-color:#F9AB33;
+	padding: 1em;
+	box-sizing:content-box;
+	}
+	
+/* ========= FLEXBOX ALIGNMENT STYLES ============ */
+
+li {
+	  /* the label and input become flex items within each list item */
+	  /* Wrapping is turned on so labels stack above inputs on narrow viewports */
+	display: flex;
+	flex-wrap: wrap;
+}
+label {
+	/* labels are fixed at 8ems wide with a little margin to keep them 
+	from bumbing into other elements */
+	flex: 0 0 8em;
+	margin-right: 1em;
+	margin-bottom: 4px;
+	color: #783F27;
+
+}
+input, textarea, fieldset {
+	/* form inputs and fieldsets are fully flexible to fill the available width */
+	flex: 1 1 20em;
+	background-color: #F9AB33
+}
+
+#features label, #colors label {
+	/* Because labels are used differently in the lists within fieldsets,
+	(there's one for each radio button and checkbox)
+	I need to override the previous flex setting so they line up correctly */
+	flex: 1 1 auto;
+	color: #000;
+}
+
+#colors ul {
+	/* This makes each radio box list item a flex item so they line up horizontally */
+	/* This could also be done by making them display: inline, 
+	but the labels sometimes get separated from their button/box at narrow widths*/
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+/*  ========= FORM WIDGET STYLES  ========= */
+/* Fonts are set to "inherit" the font-family of the document.*/
+
+input.textinput {
+	height: 2em;
+	border: 1px solid rgba(0,0,0,.3);
+	padding-left: 6px;
+	font-family: inherit;
+	font-size: .875em;
+}
+textarea {
+	display: block;
+	height: 5em;
+	border: 1px solid rgba(0,0,0,.3);
+	padding-left: 6px;
+	font-family: inherit; 
+	font-size: .875em;
+	line-height: 1.25;
+	overflow: auto;
+	resize: none;
+}
+select {
+	width: 6em;
+	font-size: inherit; /* The browser default font size is very small, so I changed it to match the document */
+	margin-right: 10px;
+}
+
+input[type="text"] {
+     border:2px dashed #783F27;	
+     color: #783F27;	 
+	 } 
+input[type="email"] {
+     border:2px dashed #783F27;
+	 color:#783F27;
+	 }
+	 
+input[type="password"] {
+   
+     border:2px dashed #783F27;
+	 color:#783F27;
+	 }
+	 
+input[type="tel"] {
+   
+     border:2px dashed #783F27;
+	 color:#783F27;
+	 }
+
+input[type="submit"] {
+	/* I've changed the style of the button and set its side margins to "auto" so it is 
+	always centered in the width of the form */
+	width: 10em;
+	height: 2em;
+	background: #F9AB33;
+	border: 3px dashed #783F27;
+	border-radius: 4px;
+	font-family: Comic Sans, cursive;
+	color:#783F27;
+	font-size: inherit;
+	flex: 0 1 8em;
+	margin: 0 auto;
+}
+
+
+/* ========= FIELDSET AND LEGEND STYLES ========= */
+fieldset {
+	/* Turns off the default box that browsers draw around fieldsets */
+	padding: 0;
+	border: none;
+}
+legend {
+	/* this hides the legend, but it will still be read by screenreaders 
+	for each checkbox/button option for acccessibility */
+	/* NOTE: There is also a label that displays for each fieldset, so I made sure the
+	label and legend were different as not to have the same term read twice */
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+	
+</style> 
+
+</head>
+
+<body>
+
+
+
+<form action="" method="post">
+
+<h2>REGISTRATION FORM</h2>
+
+<ul>
+<li><label for="form-email">Email:</label> <input type="email" name="emailaddress" id="form-email" class="textinput"></li>
+<li><label for="form-password">Password:</label> <input type="password" name="password" id="form-password" class="textinput"></li>
+
+<li class="buttons"><input type="submit" value="LOGIN"></li>
+
+</ul>
+
+</form>
+
+
+</body></html>
